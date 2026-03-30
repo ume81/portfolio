@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>インスタ自動投稿 LINE Bot | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .feature-item { border-left-color: var(--accent3); }
+  .tech-tag.highlight { border-color: var(--accent3); color: var(--accent3); background: rgba(255,107,53,0.05); }
+  .notes-box { border-left-color: var(--accent3); }
+  .btn-primary { background: var(--accent3); border-color: var(--accent3); color: #fff; }
+  .btn-primary:hover { background: transparent; color: var(--accent3); }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+<div class="page-wrapper">
+
+  <nav class="nav">
+    <a class="back-link" href="../index.html">ポートフォリオに戻る</a>
+    <span class="nav-num">01 / 06</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-meta">
+      <span class="type-badge type-ai">AI</span>
+      <span class="type-badge type-app">LINE Bot</span>
+      <span class="hero-num">// 01</span>
+    </div>
+    <h1>インスタ自動投稿<br>LINE Bot</h1>
+    <p class="hero-desc">
+      LINEで画像と一言を送るだけで、Claude APIがプロ品質のキャプション・ハッシュタグを生成しInstagramへ自動投稿。小規模店舗のSNS運用コストをゼロにする多店舗対応AI投稿支援システム。
+    </p>
+  </div>
+
+  <div class="media-block">
+    <div class="media-label">demo / screenshot</div>
+    <div class="media-main">
+      <img src="../images/sns-line-flow.jpg" alt="LINEでの投稿フロー全体" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+    </div>
+    <div class="media-sub-grid">
+      <div class="media-sub">
+        <img src="../images/sns-edit-trim.jpg" alt="投稿編集・画像トリミング画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/sns-edit-caption.jpg" alt="AI生成キャプション編集・Instagram投稿" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/sns-published.jpg" alt="公開済み投稿確認画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">overview</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-card-label">PROBLEM</div>
+        <div class="overview-card-value">「毎日インスタを更新したいが、キャプションを考える時間がない」という飲食店・美容院などの小規模店舗オーナーの課題。専用アプリの導入・操作習得もハードルが高い</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">SOLUTION</div>
+        <div class="overview-card-value">使い慣れたLINEで画像と一言を送るだけで完結。Claude APIが業種・店舗に合わせたプロ品質の投稿文を生成し、確認OKを返すだけでInstagramへ自動投稿</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">TARGET USER</div>
+        <div class="overview-card-value">飲食店・美容院・小売店など小規模店舗のオーナー・スタッフ。PINコード認証で複数スタッフが同じLINEアカウントから投稿できるマルチスタッフ設計</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">PLATFORM</div>
+        <div class="overview-card-value">LINE Bot（主要UI）+ Web管理画面（補助）。バックエンドはXserverでLaravel APIを稼働。店舗ごとに独立したLINE公式アカウントで運用</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">features</div>
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="feature-icon">💬</div>
+        <div class="feature-content">
+          <div class="feature-title">LINEで完結する投稿フロー</div>
+          <div class="feature-desc">画像送信→説明入力→AI生成→確認→Instagram投稿の全フローがLINEチャット上で完結。新しいアプリのインストール不要で、スタッフへの操作説明コストもゼロ。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🤖</div>
+        <div class="feature-content">
+          <div class="feature-title">3層プロンプトによるAI生成</div>
+          <div class="feature-desc">Claude APIへの指示はベース・業種別・店舗別の3層構造。業種（飲食/美容など）と店舗固有の特徴・トーンを重ねることで、汎用的でなく「その店らしい」投稿文を生成。投稿タイプ（通常・PR・イベント・季節）ごとにプリセットを切り替え。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔐</div>
+        <div class="feature-content">
+          <div class="feature-title">PINコード認証・マルチスタッフ</div>
+          <div class="feature-desc">店舗共有PINコードで友達追加したスタッフを認証。初回登録者がオーナー、以降はスタッフとして役割自動付与。複数スタッフが同じLINE公式アカウントを使って投稿できる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🏪</div>
+        <div class="feature-content">
+          <div class="feature-title">マルチ店舗対応</div>
+          <div class="feature-desc">店舗ごとに独立したLINE公式アカウント・Instagram連携・プロンプト設定を管理。Webhookは `?store={slug}` パラメータで振り分け。1つのシステムで複数店舗を横断管理できる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🖥️</div>
+        <div class="feature-content">
+          <div class="feature-title">Web管理画面</div>
+          <div class="feature-desc">Inertia.js + React製の管理画面で投稿履歴・下書き管理・店舗設定を操作。プロンプトテンプレートのカスタマイズや、LINE/Instagram連携設定もGUIから変更可能。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🚀</div>
+        <div class="feature-content">
+          <div class="feature-title">Web編集画面 & Instagram自動投稿</div>
+          <div class="feature-desc">LINEの「投稿を確認する」ボタンからWeb編集画面へ遷移。画像のトリミング（正方形・縦長・横長）、AIキャプションの微調整、ハッシュタグ編集ができ、「選択先に投稿」でInstagram Graph API経由で即時投稿。画像はAWS S3に保存し署名付きURLでInstagramに渡す。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📍</div>
+        <div class="feature-content">
+          <div class="feature-title">Googleビジネスプロフィール連携 <span style="font-size:11px;opacity:0.6;">（実装予定）</span></div>
+          <div class="feature-desc">Instagramに加えてGoogleビジネスプロフィールへの同時投稿にも対応予定。店舗の最新情報・お知らせをGoogle Maps上の口コミ欄にも自動展開し、集客チャネルをさらに拡大する。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">tech stack</div>
+    <div class="tech-grid">
+      <span class="tech-tag highlight">Laravel 10.x / PHP</span>
+      <span class="tech-tag highlight">Claude API（Sonnet 4.5）</span>
+      <span class="tech-tag highlight">LINE Messaging API</span>
+      <span class="tech-tag highlight">Instagram Graph API</span>
+      <span class="tech-tag highlight">AWS S3</span>
+      <span class="tech-tag">React / Inertia.js</span>
+      <span class="tech-tag">Tailwind CSS</span>
+      <span class="tech-tag">MySQL 8.0</span>
+      <span class="tech-tag">MinIO（開発用S3互換）</span>
+      <span class="tech-tag">Docker Compose</span>
+      <span class="tech-tag">Xserver</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">technical notes</div>
+    <div class="notes-box">
+      <p>LINE Webhookのタイムアウト制限（1秒）に対応するため、AI生成処理は非同期で実行しキュー経由で処理。Xserverなどキューワーカーが使えない環境ではCron+データベースキューで代替するデュアルモード設計にした。完了後はプッシュメッセージで結果を返す。</p>
+      <p>Instagram Graph APIの仕様上、投稿は「メディアオブジェクト作成→公開」の2ステップが必要。画像URLに一時的にアクセス可能なS3署名付きURLを使用し、Instagram側のメディア取得を担保している。</p>
+      <p>AIプロンプトはベース（全業種共通）→業種別（飲食・美容など）→店舗別（個店のトーン・NGワード）の3層で構成。店舗オーナーがWeb管理画面からプロンプトテンプレートを自由にカスタマイズでき、投稿文のブランドトーンを細かく制御できる。</p>
+    </div>
+  </div>
+
+  <div class="links-row">
+    <a class="btn btn-secondary" href="../index.html">← 一覧に戻る</a>
+  </div>
+
+</div>
+<script src="works.js"></script>
+</body>
+</html>

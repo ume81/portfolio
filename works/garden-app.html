@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>家庭菜園管理アプリ | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .feature-item { border-left-color: var(--accent2); }
+  .tech-tag.highlight { border-color: var(--accent2); color: var(--accent2); background: rgba(0,255,157,0.05); }
+  .notes-box { border-left-color: var(--accent2); }
+  .btn-primary { background: var(--accent2); border-color: var(--accent2); color: #000; }
+  .btn-primary:hover { background: transparent; color: var(--accent2); }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+<div class="page-wrapper">
+
+  <nav class="nav">
+    <a class="back-link" href="../index.html">ポートフォリオに戻る</a>
+    <span class="nav-num">06 / 06</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-meta">
+      <span class="type-badge type-app">Android</span>
+      <span class="type-badge type-web">Expo</span>
+      <span class="hero-num">// 06</span>
+    </div>
+    <h1>家庭菜園<br>管理アプリ</h1>
+    <p class="hero-desc">
+      植えた日を起点に「いつ何をすべきか」が時系列で一目わかる栽培タイムラインアプリ。天気予報と連動してリアルタイムにアドバイスを更新し、完了チェックとプッシュ通知で「やり忘れ」を防ぐ。
+    </p>
+  </div>
+
+  <div class="media-block">
+    <div class="media-label">demo / screenshot</div>
+    <div class="media-main">
+      <img src="../images/garden-timeline.jpg" alt="タイムライン・天気連動アドバイス画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+    </div>
+    <div class="media-sub-grid">
+      <div class="media-sub">
+        <img src="../images/garden-detail.jpg" alt="栽培詳細タイムライン" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/garden-calendar.jpg" alt="カレンダー・今週のやること" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/garden-select.jpg" alt="野菜選択画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">overview</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-card-label">PROBLEM</div>
+        <div class="overview-card-value">家庭菜園初心者は「いつ水をやればいい？」「追肥はいつ？」がわからず失敗しがち。既存アプリは静的な情報提供のみで、実行管理や天気連動がない</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">SOLUTION</div>
+        <div class="overview-card-value">植えた日を入力するだけでタイムラインが自動生成。天気APIと連動してリアルタイムにアドバイスを更新。完了チェック＋プッシュ通知でやり忘れを防ぐ</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">TARGET USER</div>
+        <div class="overview-card-value">家庭菜園の初心者〜中級者。失敗経験があってもっとうまくやりたい層。ベランダのプランター栽培から本格的な家庭菜園まで対応</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">PLATFORM</div>
+        <div class="overview-card-value">Android（MVP）。Expo製のため将来的にiOS対応予定。バックエンドはXserverでLaravel APIを稼働</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">features</div>
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="feature-icon">📅</div>
+        <div class="feature-content">
+          <div class="feature-title">栽培タイムライン</div>
+          <div class="feature-desc">植えた日を起点に種まき・間引き・追肥・収穫など各フェーズをタイムライン形式で表示。「いまここ」マーカーで現在のフェーズを強調し、次にすべきことが一目でわかる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌤️</div>
+        <div class="feature-content">
+          <div class="feature-title">天気連動アドバイス</div>
+          <div class="feature-desc">OpenWeatherMap APIで47都道府県の天気を毎朝バッチ取得。霜注意・水やり不要・高温対策など条件に応じたアドバイスをタイムラインに反映。プッシュ通知でもリアルタイムに配信。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">✅</div>
+        <div class="feature-content">
+          <div class="feature-title">完了チェック・リマインダー</div>
+          <div class="feature-desc">各フェーズに「完了」ボタン。タップで実施日が自動保存され予定日とのズレを表示。予定日の朝にプッシュ通知、2日経過しても未完了なら再通知でやり忘れを防ぐ。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📆</div>
+        <div class="feature-content">
+          <div class="feature-title">カレンダー一覧</div>
+          <div class="feature-desc">登録中の全野菜の作業イベントをカレンダー上に色分け表示。「今週のやること」リストで複数野菜の作業を一元管理できる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📍</div>
+        <div class="feature-content">
+          <div class="feature-title">地域別スケジュール</div>
+          <div class="feature-desc">冷涼地・中間地・暖地の3区分でタイムラインを補正。同じ野菜でも北海道と九州では植え付け時期が異なるため、地域設定に応じて栽培スケジュールを自動調整。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🥦</div>
+        <div class="feature-content">
+          <div class="feature-title">野菜データベース</div>
+          <div class="feature-desc">ミニトマト・きゅうり・なす・ピーマンなど15種以上の主要野菜に対応。各都道府県農業試験場・農水省・JAの公的データをもとに栽培フェーズ・水やり・施肥・収穫基準を構造化して管理。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">tech stack</div>
+    <div class="tech-grid">
+      <span class="tech-tag highlight">Expo SDK 52 / React Native</span>
+      <span class="tech-tag highlight">TypeScript</span>
+      <span class="tech-tag highlight">Laravel 12 / PHP 8.3</span>
+      <span class="tech-tag highlight">OpenWeatherMap API</span>
+      <span class="tech-tag highlight">Expo Push Notifications</span>
+      <span class="tech-tag">MySQL 8.0</span>
+      <span class="tech-tag">Laravel Sanctum</span>
+      <span class="tech-tag">Laravel Socialite（Google認証）</span>
+      <span class="tech-tag">Filament（管理画面）</span>
+      <span class="tech-tag">Stripe / Laravel Cashier</span>
+      <span class="tech-tag">EAS Build</span>
+      <span class="tech-tag">Xserver</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">technical notes</div>
+    <div class="notes-box">
+      <p>天気連動が差別化の核。OpenWeatherMap APIで47都道府県分の天気データを毎朝6時のバッチ処理（Cron）で一括取得しサーバーキャッシュに保存。ユーザーのリクエストはキャッシュを参照する設計でAPI消費量を抑えている。API障害時はキャッシュ有効期限を6時間→24時間に延長して前日データで継続提供するフォールバック設計も実装。</p>
+      <p>通知は2層構成。追肥・収穫など栽培スケジュールに基づく通知はExpo Notificationsでローカルにスケジューリング（オフラインでも動作）。霜注意・高温対策など天気由来のアラートはLaravel→Expo Push Serviceを経由したサーバープッシュで配信。</p>
+      <p>バックエンドはLaravel 12 + Filament管理画面。野菜マスターデータの追加・編集をFilamentのCRUD画面から管理できる設計にし、コーディング不要でデータ拡充が可能。将来のサブスク機能（¥480/月）はStripe + Laravel Cashierで対応予定。</p>
+    </div>
+  </div>
+
+  <div class="links-row">
+    <a class="btn btn-secondary" href="../index.html">← 一覧に戻る</a>
+  </div>
+
+</div>
+<script src="works.js"></script>
+</body>
+</html>

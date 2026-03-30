@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>バーコード在庫管理アプリ | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .feature-item { border-left-color: var(--accent3); }
+  .tech-tag.highlight { border-color: var(--accent3); color: var(--accent3); background: rgba(255,107,53,0.05); }
+  .notes-box { border-left-color: var(--accent3); }
+  .btn-primary { background: var(--accent3); border-color: var(--accent3); color: #000; }
+  .btn-primary:hover { background: transparent; color: var(--accent3); }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+<div class="page-wrapper">
+
+  <nav class="nav">
+    <a class="back-link" href="../index.html">ポートフォリオに戻る</a>
+    <span class="nav-num">05 / 06</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-meta">
+      <span class="type-badge type-web">WEB APP</span>
+      <span class="hero-num">// 05</span>
+    </div>
+    <h1>バーコード<br>在庫管理アプリ</h1>
+    <p class="hero-desc">
+      商品バーコードをスキャンするだけで在庫の入出庫を管理できるWebアプリ。小売・飲食・EC系の個人事業主や小規模店舗向けに、シンプルな操作性と実用的な機能を両立した。
+    </p>
+  </div>
+
+  <div class="media-block">
+    <div class="media-label">demo / screenshot</div>
+    <div class="media-main">
+      <img src="../images/inventory-main.png" alt="店舗管理ダッシュボード" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+    </div>
+    <div class="media-sub-grid">
+      <div class="media-sub">
+        <img src="../images/inventory-staff.png" alt="スタッフ向けダッシュボード" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/inventory-scan.png" alt="バーコードスキャン画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/inventory-order.png" alt="発注管理画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">overview</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-card-label">PROBLEM</div>
+        <div class="overview-card-value">手書き・Excelでの在庫管理は手間がかかりミスが起きやすい。高機能な在庫管理システムは個人事業主には過剰で高コスト</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">SOLUTION</div>
+        <div class="overview-card-value">バーコードをスキャンするだけで入出庫を記録。スマホ1台あれば使えるシンプルな在庫管理を実現</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">TARGET USER</div>
+        <div class="overview-card-value">美容院・理容院向けのマルチテナントSaaS。テナントオーナー・スタッフ・管理者の3ロール構成</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">PLATFORM</div>
+        <div class="overview-card-value">Webアプリ（スマホのカメラでバーコードスキャン対応）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">features</div>
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="feature-icon">📷</div>
+        <div class="feature-content">
+          <div class="feature-title">バーコードスキャンで即記録</div>
+          <div class="feature-desc">スマホカメラでJAN・QRコードをスキャンするだけで商品を特定し、入庫・出庫を記録。手入力不要。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📊</div>
+        <div class="feature-content">
+          <div class="feature-title">リアルタイム在庫一覧</div>
+          <div class="feature-desc">商品ごとの現在在庫数をリアルタイムで確認。検索・カテゴリフィルタで素早く目的の商品を特定。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔔</div>
+        <div class="feature-content">
+          <div class="feature-title">在庫アラート</div>
+          <div class="feature-desc">設定した閾値を下回るとアラート通知。発注忘れを防ぐ。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📋</div>
+        <div class="feature-content">
+          <div class="feature-title">入出庫履歴・CSV出力</div>
+          <div class="feature-desc">すべての入出庫履歴を記録。期間指定でCSVエクスポートし会計・棚卸しに活用できる。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">tech stack</div>
+    <div class="tech-grid">
+      <span class="tech-tag highlight">Laravel 11 / PHP 8.2</span>
+      <span class="tech-tag highlight">React / TypeScript</span>
+      <span class="tech-tag highlight">MySQL 8.0</span>
+      <span class="tech-tag highlight">JANコードスキャン</span>
+      <span class="tech-tag">楽天商品API</span>
+      <span class="tech-tag">マルチテナント</span>
+      <span class="tech-tag">Docker Compose</span>
+      <span class="tech-tag">GitHub CI/CD</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">technical notes</div>
+    <div class="notes-box">
+      <p>JANコードスキャン時に楽天商品APIと連携し、商品名・画像・価格を自動取得。未登録商品でも即座に商品マスタへ登録できる。API取得失敗時も統一した自動下書き作成フローに落ちるよう設計した。</p>
+      <p>マルチテナント構成で複数店舗を一元管理。テナントごとにデータを完全分離し、テナントオーナー・スタッフ・システム管理者の3ロールで権限を制御している。</p>
+      <p>GitHub ActionsによるCI/CDパイプラインを構築し、developブランチへのマージで自動デプロイが走る体制を整えた。</p>
+    </div>
+  </div>
+
+  <div class="links-row">
+    <a class="btn btn-secondary" href="../index.html">← 一覧に戻る</a>
+  </div>
+
+</div>
+<script src="works.js"></script>
+</body>
+</html>

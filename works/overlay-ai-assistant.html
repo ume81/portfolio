@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>オーバーレイAIアシスタント | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .feature-item { border-left-color: var(--accent2); }
+  .tech-tag.highlight { border-color: var(--accent2); color: var(--accent2); background: rgba(0,255,157,0.05); }
+  .notes-box { border-left-color: var(--accent2); }
+  .btn-primary { background: var(--accent2); border-color: var(--accent2); color: #000; }
+  .btn-primary:hover { background: transparent; color: var(--accent2); }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+<div class="page-wrapper">
+
+  <nav class="nav">
+    <a class="back-link" href="../index.html">ポートフォリオに戻る</a>
+    <span class="nav-num">03 / 06</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-meta">
+      <span class="type-badge type-ai">AI</span>
+      <span class="type-badge type-app">Android</span>
+      <span class="hero-num">// 03</span>
+    </div>
+    <h1>オーバーレイ<br>AIアシスタント</h1>
+    <p class="hero-desc">
+      どのアプリを使っていても画面上に常駐するLive2DキャラクターがAIアシスタントとして機能するAndroidアプリ。タップして話しかければLLMが応答し、タスク管理やアプリ起動も自然な会話で操作できる。
+    </p>
+  </div>
+
+  <div class="media-block">
+    <div class="media-label">demo / screenshot</div>
+    <div class="media-main">
+      <img src="../images/overlay-home.jpg" alt="ホーム画面でのLive2Dキャラクターオーバーレイ表示" style="width:100%;height:100%;object-fit:cover;object-position:center;border-radius:4px;">
+    </div>
+    <div class="media-sub-grid" style="grid-template-columns: repeat(5, 1fr);">
+      <div class="media-sub">
+        <img src="../images/overlay-chat.jpg" alt="LLM会話・チャット入力パネル" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/overlay-task.jpg" alt="タスク追加モーダル（ToDo）" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/overlay-shopping.jpg" alt="買い物リストタスク追加" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/overlay-expiry.jpg" alt="賞味期限タスク管理" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/overlay-launcher.jpg" alt="アプリランチャー" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">overview</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-card-label">PROBLEM</div>
+        <div class="overview-card-value">タスク管理アプリを別途開く手間が続かない。AIに相談したくても専用アプリへの切り替えが面倒。作業中に画面から手を離さず操作したい</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">SOLUTION</div>
+        <div class="overview-card-value">Live2DキャラクターがAndroidオーバーレイとして常駐。どのアプリを使っていてもタップ一つで会話でき、タスク登録・通知・アプリ起動まで画面切り替え不要で操作できる</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">TARGET USER</div>
+        <div class="overview-card-value">AIアシスタントを日常使いしたいAndroidユーザー。スマホ操作中に手軽にタスクを登録したい人。キャラクターとのインタラクションを楽しみながら生産性を上げたい人</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">PLATFORM</div>
+        <div class="overview-card-value">Android専用（Flutter製）。TYPE_APPLICATION_OVERLAY権限を使った全画面透過オーバーレイ実装。Google Play非公開・APK直接配布</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">features</div>
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="feature-icon">🧍</div>
+        <div class="feature-content">
+          <div class="feature-title">Live2D常駐オーバーレイ</div>
+          <div class="feature-desc">WebView内でPIXI.js + pixi-live2d-displayを使いLive2Dキャラクターを描画。Kotlinネイティブの独自実装（flutter_overlay_windowパッケージ不使用）で全画面透過オーバーレイを実現し、他のアプリ使用中も常に表示される。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">💬</div>
+        <div class="feature-content">
+          <div class="feature-title">LLM会話（Claude / Gemini API）</div>
+          <div class="feature-desc">タップで会話パネルを開いてテキスト入力するとClaude APIまたはGemini APIが応答。設定でモデルを切り替え可能。会話履歴はHiveでローカル保存し、文脈を保ちながら連続して会話できる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📋</div>
+        <div class="feature-content">
+          <div class="feature-title">タスク管理・期限通知</div>
+          <div class="feature-desc">ToDoリスト・買い物リストをオーバーレイから直接登録。期限が近づくとキャラクターが通知し、スヌーズ（5分/15分/30分）にも対応。タスクデータはHiveでオフライン保存するためネット不要で動作。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎭</div>
+        <div class="feature-content">
+          <div class="feature-title">キャラクター性格カスタマイズ</div>
+          <div class="feature-desc">性別・性格タイプ・詳細パラメータの3段階でAIアシスタントの返答スタイルをカスタマイズ。設定した性格はシステムプロンプトに反映され、会話のトーン・言葉遣いが変化する。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🚀</div>
+        <div class="feature-content">
+          <div class="feature-title">アプリランチャー</div>
+          <div class="feature-desc">よく使うアプリをお気に入り登録してオーバーレイから直接起動。カテゴリ分類・キーワード検索・インストール済みアプリの自動更新に対応し、ホームに戻らずアプリを切り替えられる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🖼️</div>
+        <div class="feature-content">
+          <div class="feature-title">画像キャラクター・アニメーション</div>
+          <div class="feature-desc">Live2Dモデル（.model3.json形式）に加え、静止画キャラクターも選択可能。待機・話す・うなずく・驚く・喜ぶの5種類のアニメーションをバッテリー消費を抑えながら再生。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">tech stack</div>
+    <div class="tech-grid">
+      <span class="tech-tag highlight">Flutter 3.16+ / Dart</span>
+      <span class="tech-tag highlight">Kotlin（独自オーバーレイ実装）</span>
+      <span class="tech-tag highlight">Live2D Cubism 3.x/4.x</span>
+      <span class="tech-tag highlight">Claude API / Gemini API</span>
+      <span class="tech-tag highlight">PIXI.js + pixi-live2d-display</span>
+      <span class="tech-tag">flutter_inappwebview</span>
+      <span class="tech-tag">Provider（状態管理）</span>
+      <span class="tech-tag">Hive（ローカルDB）</span>
+      <span class="tech-tag">flutter_secure_storage（APIキー）</span>
+      <span class="tech-tag">shared_preferences</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">technical notes</div>
+    <div class="notes-box">
+      <p>オーバーレイ実装はflutter_overlay_windowパッケージを使わず、Kotlinで完全独自実装した（Live2DOverlayService.kt）。TYPE_APPLICATION_OVERLAY権限で全画面透過Windowを生成し、キャラクター以外の領域はタッチイベントをスルーすることで下のアプリを邪魔しない設計にした。</p>
+      <p>Live2DはFlutterのWebView内でPIXI.js + pixi-live2d-displayを使って描画し、Flutter ↔ WebView間をJavaScriptチャネルで通信。アニメーション切り替えや表情変化のトリガーをFlutter側から制御している。待機中はアニメーション更新間隔を伸ばしてバッテリー消費を最小化。表示キャラクターは<a href="https://www.live2d.com/learn/sample/" target="_blank" rel="noopener" style="color:var(--accent2);">Live2D公式サンプルモデル</a>を使用している。</p>
+      <p>Claude APIとGemini APIをプラグイン式に切り替え可能な設計にし、APIキーはflutter_secure_storageで端末内に暗号化保存。タスク・チャット履歴はHiveでオフライン保存するため、LLM会話以外の機能はネット不要で動作する。</p>
+    </div>
+  </div>
+
+  <div class="links-row">
+    <a class="btn btn-secondary" href="../index.html">← 一覧に戻る</a>
+  </div>
+
+</div>
+<script src="works.js"></script>
+</body>
+</html>

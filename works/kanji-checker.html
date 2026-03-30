@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>漢字ドリルAI採点アプリ | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .feature-item { border-left-color: var(--accent4); }
+  .tech-tag.highlight { border-color: var(--accent4); color: var(--accent4); background: rgba(168,85,247,0.05); }
+  .notes-box { border-left-color: var(--accent4); }
+  .btn-primary { background: var(--accent4); border-color: var(--accent4); color: #fff; }
+  .btn-primary:hover { background: transparent; color: var(--accent4); }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+<div class="page-wrapper">
+
+  <nav class="nav">
+    <a class="back-link" href="../index.html">ポートフォリオに戻る</a>
+    <span class="nav-num">02 / 06</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-meta">
+      <span class="type-badge type-ai">AI</span>
+      <span class="type-badge type-web">画像認識</span>
+      <span class="hero-num">// 02</span>
+    </div>
+    <h1>漢字ドリル<br>AI採点アプリ</h1>
+    <p class="hero-desc">
+      子どもが書いた漢字の手書き画像をアップロードするだけで、AIが自動採点。正誤だけでなく「どこが違うか」まで具体的なフィードバックを返す教育向けWebアプリ。
+    </p>
+  </div>
+
+  <div class="media-block">
+    <div class="media-label">demo / screenshot</div>
+    <div class="media-main">
+      <img src="../images/kanji-dashboard.png" alt="漢字採点ダッシュボード" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+    </div>
+    <div class="media-sub-grid">
+      <div class="media-sub">
+        <img src="../images/kanji-upload.png" alt="採点アップロード画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/kanji-result.png" alt="採点結果画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/kanji-gacha.png" alt="ガチャ結果画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">overview</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-card-label">PROBLEM</div>
+        <div class="overview-card-value">漢字練習の採点は保護者の手作業。枚数が多いと確認が追いつかず、間違いを見逃しやすい。子どものモチベーション維持も課題</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">SOLUTION</div>
+        <div class="overview-card-value">ドリルを撮影してアップロードするだけでClaude APIが自動採点。採点結果で経験値・ポイントを獲得しレベルアップ。ガチャで継続的な学習をサポート</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">TARGET USER</div>
+        <div class="overview-card-value">小学生の子どもを持つ保護者。親子アカウント制で保護者が子どもの学習状況を管理。承認制ユーザー登録で知人限定運用</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">PLATFORM</div>
+        <div class="overview-card-value">Webアプリ（スマホ撮影→アップロード対応。Xserverで本番稼働中）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">features</div>
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="feature-icon">📷</div>
+        <div class="feature-content">
+          <div class="feature-title">撮影・アップロードで即採点</div>
+          <div class="feature-desc">スマホでドリルを撮影してアップロードするだけ。Claude APIが手書き文字を画像認識し、マス目ごとに正誤を判定。採点とフィードバック生成を一括処理。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-content">
+          <div class="feature-title">文字・行・列単位のスコア表示</div>
+          <div class="feature-desc">総合スコア・文字正確性・書字品質を数値で提示。どの文字が何点かを行列形式で一覧表示し、間違えた箇所を直感的に把握できる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">⬆️</div>
+        <div class="feature-content">
+          <div class="feature-title">経験値・レベルアップ</div>
+          <div class="feature-desc">採点結果に応じて経験値とポイントを獲得。蓄積するとレベルアップし、子どもの成長を可視化。練習を続けるほどキャラクターが強くなる仕組みでモチベーションを維持。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎰</div>
+        <div class="feature-content">
+          <div class="feature-title">ガチャシステム</div>
+          <div class="feature-desc">獲得したポイントでガチャを引いて報酬を獲得。練習の継続に対するご褒美として機能し、「もう1回やってみよう」という動機づけをゲームで実現。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">👨‍👧</div>
+        <div class="feature-content">
+          <div class="feature-title">親子アカウント制</div>
+          <div class="feature-desc">保護者アカウントで複数の子どもを管理。子どもは自分のダッシュボードで練習・採点。承認制ユーザー登録で知人限定の安全な運用が可能。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🛠️</div>
+        <div class="feature-content">
+          <div class="feature-title">管理画面</div>
+          <div class="feature-desc">全ユーザーの採点履歴を一元管理。ユーザー承認・スタンプ設定のカスタマイズが管理画面から操作可能。フィルタ・ソート・ページネーション対応。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">tech stack</div>
+    <div class="tech-grid">
+      <span class="tech-tag highlight">Laravel / PHP</span>
+      <span class="tech-tag highlight">React / TypeScript</span>
+      <span class="tech-tag highlight">Inertia.js</span>
+      <span class="tech-tag highlight">Claude API（画像認識・採点）</span>
+      <span class="tech-tag highlight">AWS S3（画像保存）</span>
+      <span class="tech-tag">Laravel Socialite（Google認証）</span>
+      <span class="tech-tag">MySQL 8.0</span>
+      <span class="tech-tag">Tailwind CSS</span>
+      <span class="tech-tag">Docker Compose</span>
+      <span class="tech-tag">Xserver</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">technical notes</div>
+    <div class="notes-box">
+      <p>当初はGoogle Cloud Vision APIでOCRを実装したが、精度が不十分だったためClaude APIに切り替え。手書き漢字の画像をそのままClaude APIに渡し、文字認識と採点・フィードバック生成を一括で行う構成に変更した。精度が大幅に改善し、縦書きドリルの認識も安定した。</p>
+      <p>Xserverなどキューワーカーが使えない環境でも動作するよう、<code>ignore_user_abort(true)</code>による疑似バックグラウンド処理（syncモード）とLaravel Queue（queueモード）を切り替えできる設計にした。画像ファイルはAWS S3に保存。</p>
+      <p>ゲーミフィケーション機能は経験値・レベル・ポイント・ガチャの4軸で構成。採点完了後に自動で経験値とポイントが付与され、レベルアップ判定・ガチャ報酬の抽選まで一連のフローを処理する。</p>
+    </div>
+  </div>
+
+  <div class="links-row">
+    <a class="btn btn-secondary" href="../index.html">← 一覧に戻る</a>
+  </div>
+
+</div>
+<script src="works.js"></script>
+</body>
+</html>

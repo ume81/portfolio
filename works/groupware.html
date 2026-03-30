@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>グループウェア | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scanline"></div>
+<div class="page-wrapper">
+
+  <nav class="nav">
+    <a class="back-link" href="../index.html">ポートフォリオに戻る</a>
+    <span class="nav-num">04 / 06</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-meta">
+      <span class="type-badge type-web">WEB APP</span>
+      <span class="hero-num">// 04</span>
+    </div>
+    <h1>グループウェア</h1>
+    <p class="hero-desc">
+      勤怠管理・チャット・タスク管理を統合したWebアプリ。要件定義・設計・DB設計・実装・テストまで一人で担当。複数機能を持つ業務システムの開発力を示すポートフォリオ作品。
+    </p>
+  </div>
+
+  <div class="media-block">
+    <div class="media-label">demo / screenshot</div>
+    <div class="media-main">
+      <img src="../images/groupware.png" alt="グループウェア ダッシュボード" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+    </div>
+    <div class="media-sub-grid">
+      <div class="media-sub">
+        <img src="../images/groupware-attendance.png" alt="勤怠管理画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/groupware-chat.png" alt="チャット画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/groupware-workflow.png" alt="ワークフロー管理画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">overview</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-card-label">CONCEPT</div>
+        <div class="overview-card-value">製造・工場向けの業務支援Webアプリ。ヒヤリハット・日報・点検などの報告承認フロー、勤怠・シフト管理、チャット・掲示板を一つのシステムに統合</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">SCOPE</div>
+        <div class="overview-card-value">要件定義・DB設計・フロントエンド・バックエンド・認証・テストまで全工程を一人で実装</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">USERS</div>
+        <div class="overview-card-value">admin / approver / user の3ロール。Spatie Permissionによる細粒度の権限管理を実装</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">PLATFORM</div>
+        <div class="overview-card-value">Webアプリ（PC・スマホ対応のレスポンシブデザイン）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">features</div>
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="feature-icon">⚠️</div>
+        <div class="feature-content">
+          <div class="feature-title">報告系（ヒヤリハット・日報・点検チェックリスト）</div>
+          <div class="feature-desc">ヒヤリハット報告は危険度レベル・対策追跡付き。点検チェックリストはスケジュール型で期限超過を自動検知して管理者に通知。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📋</div>
+        <div class="feature-content">
+          <div class="feature-title">汎用ワークフローエンジン</div>
+          <div class="feature-desc">ステップ数・承認者・AND/OR条件を管理画面で自由に定義できる汎用エンジン。代理承認・差し戻し・再提出にも対応し、全承認アクションを履歴ログに記録。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🗂️</div>
+        <div class="feature-content">
+          <div class="feature-title">動的フォーム設計</div>
+          <div class="feature-desc">管理者がコーディング不要でフォーム項目（テキスト・選択・ファイル添付など）を設計。報告種別ごとに異なるフォームを画面上で構築できる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🕐</div>
+        <div class="feature-content">
+          <div class="feature-title">勤怠・シフト管理</div>
+          <div class="feature-desc">出退勤打刻・打刻修正申請・休暇申請・月次集計に対応。3交代シフト制と固定時間制を部署単位で混在運用可能。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">💬</div>
+        <div class="feature-content">
+          <div class="feature-title">チャット・掲示板</div>
+          <div class="feature-desc">Laravel Reverbによるリアルタイムチャット。チャンネル作成・ファイル添付に対応。全体・部署別の掲示板も搭載。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔐</div>
+        <div class="feature-content">
+          <div class="feature-title">ロールベース権限管理</div>
+          <div class="feature-desc">Spatie Permissionによる細粒度のアクセス制御。admin / approver / user の3ロールで画面・操作範囲を分離。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">tech stack</div>
+    <div class="tech-grid">
+      <span class="tech-tag highlight">Laravel 12 / PHP 8.3</span>
+      <span class="tech-tag highlight">React 18 / TypeScript</span>
+      <span class="tech-tag highlight">Inertia.js</span>
+      <span class="tech-tag highlight">Laravel Reverb (WebSocket)</span>
+      <span class="tech-tag highlight">MySQL 8.0</span>
+      <span class="tech-tag">Redis</span>
+      <span class="tech-tag">Spatie Permission</span>
+      <span class="tech-tag">Tailwind CSS</span>
+      <span class="tech-tag">Vite 6</span>
+      <span class="tech-tag">Docker Compose</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">technical notes</div>
+    <div class="notes-box">
+      <p>Laravel + Inertia.js によるモノリシック構成を採用。APIとフロントを分離せず、サーバーサイドのルーティングをそのまま活かしながらReactのSPA体験を実現。開発工数を40〜60時間削減できると試算した。</p>
+      <p>リアルタイム通信はLaravel Reverbを用いてWebSocketサーバーを自前構築。Redisによるキュー処理と組み合わせ、集中アクセス時のタイムアウトリスクを解消した。</p>
+      <p><strong>インフラ</strong>：Raspberry Pi上にDocker Composeで全スタックを構築し、Cloudflare Tunnelで外部公開。固定IPやポート開放不要でHTTPS配信を実現している。自宅サーバーながら実運用に耐える構成を低コストで作り上げた点がポイント。</p>
+    </div>
+  </div>
+
+  <div class="links-row">
+    <a class="btn btn-secondary" href="../index.html">← 一覧に戻る</a>
+  </div>
+
+</div>
+<script src="works.js"></script>
+</body>
+</html>
