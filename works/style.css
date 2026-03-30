@@ -455,5 +455,19 @@ body::before {
 @media (max-width: 640px) {
   .page-wrapper { padding: 0 20px 60px; }
   .overview-grid { grid-template-columns: 1fr; }
-  .media-sub-grid { grid-template-columns: 1fr 1fr; }
+  .media-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .media-label {
+    grid-column: span 2;
+    margin-bottom: 0;
+  }
+  .media-main {
+    aspect-ratio: 4/3;
+  }
+  .media-sub-grid {
+    display: contents;
+  }
 }
