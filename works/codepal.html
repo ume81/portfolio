@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodePal | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .feature-item { border-left-color: var(--accent); }
+  .tech-tag.highlight { border-color: var(--accent); color: var(--accent); background: rgba(0,212,255,0.05); }
+  .notes-box { border-left-color: var(--accent); }
+  .btn-primary { background: var(--accent); border-color: var(--accent); color: #000; }
+  .btn-primary:hover { background: transparent; color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+<div class="page-wrapper">
+
+  <nav class="nav">
+    <a class="back-link" href="../index.html">ポートフォリオに戻る</a>
+    <span class="nav-num">01 / 09</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-meta">
+      <span class="type-badge type-both">VSCode Extension</span>
+      <span class="hero-num">// 01</span>
+    </div>
+    <h1>CodePal</h1>
+    <p class="hero-desc">
+      VSCodeのパネル内にLive2Dキャラクターが常駐するAIコードレビューアシスタント。コミット時の自動レビューやGitHub連携を、キャラクターとの会話で操作できる開発支援ツール。
+    </p>
+  </div>
+
+  <div class="media-block">
+    <div class="media-label">demo / screenshot</div>
+    <div class="media-main">
+      <img src="../images/codepal-main.jpg" alt="CodePal メイン画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+    </div>
+    <div class="media-sub-grid">
+      <div class="media-sub">
+        <img src="../images/codepal-character.jpg" alt="キャラクター表示" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/codepal-review.jpg" alt="コードレビュー" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/codepal-task.jpg" alt="タスク管理" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">overview</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-card-label">PROBLEM</div>
+        <div class="overview-card-value">コードレビューやGitHub操作はエディタを離れて行うことが多く、コンテキストの切り替えがストレスになる</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">SOLUTION</div>
+        <div class="overview-card-value">VSCode内にAIアシスタントを常駐させ、コードレビュー・タスク管理・PR作成・Issue確認をエディタから離れずに実行できる</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">TARGET USER</div>
+        <div class="overview-card-value">AIツールを日常的に使う個人開発者・エンジニア。キャラクターとのインタラクションで開発体験を豊かにしたい人</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">PLATFORM</div>
+        <div class="overview-card-value">VSCode拡張機能（Windows / Mac / Linux 対応）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">features</div>
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="feature-icon">🤖</div>
+        <div class="feature-content">
+          <div class="feature-title">Live2Dキャラクター常駐</div>
+          <div class="feature-desc">パネル内にLive2Dキャラクターが常駐。後輩・ツンデレ・執事・メイドなど8種類の性格タイプから選択でき、カスタムキャラクターの作成にも対応。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔍</div>
+        <div class="feature-content">
+          <div class="feature-title">自動コードレビュー</div>
+          <div class="feature-desc">コミット時に自動でコードレビューを実行。選択範囲・ファイル単位でのレビューにも対応。基本・詳細の2モードで詳細度を切り替えられる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌐</div>
+        <div class="feature-content">
+          <div class="feature-title">マルチAIプロバイダー対応</div>
+          <div class="feature-desc">Gemini / Claude / OpenAI の3プロバイダーに対応。用途やコストに合わせてモデルを切り替えられる。Gemma（オープンソース）にも対応。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🐙</div>
+        <div class="feature-content">
+          <div class="feature-title">GitHub連携</div>
+          <div class="feature-desc">GitHub Issues の確認・AIによる自動解決提案・PRの自動作成をエディタ内から実行。Octokit経由でGitHub APIと連携。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">✅</div>
+        <div class="feature-content">
+          <div class="feature-title">タスク管理</div>
+          <div class="feature-desc">キャラクターとの会話でタスクを追加・確認。コーディング中でも画面を切り替えずにタスクを管理できる。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">tech stack</div>
+    <div class="tech-grid">
+      <span class="tech-tag highlight">TypeScript</span>
+      <span class="tech-tag highlight">VSCode Extension API</span>
+      <span class="tech-tag highlight">Live2D（pixi-live2d-display / Pixi.js）</span>
+      <span class="tech-tag highlight">Gemini API</span>
+      <span class="tech-tag highlight">Claude API</span>
+      <span class="tech-tag highlight">OpenAI API</span>
+      <span class="tech-tag">Octokit（GitHub API）</span>
+      <span class="tech-tag">simple-git</span>
+      <span class="tech-tag">Webpack</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">technical notes</div>
+    <div class="notes-box">
+      <p>VSCode WebView APIを使いパネル内でLive2DキャラクターをPixi.jsでレンダリング。拡張機能のコンテキストとWebView間のメッセージパッシングで、AIレビュー結果やGitHub情報をリアルタイムに反映している。</p>
+      <p>simple-gitでコミット差分を取得しAI APIに渡すことで、コミット内容を自動解析したレビューを実現。Gemini / Claude / OpenAI のプロバイダーを設定で切り替えられるよう抽象化した。</p>
+      <p>キャラクターの性格タイプごとにシステムプロンプトを定義し、レビュー文体・アイドルメッセージ・インタラクションメッセージを変化させることで、キャラクターとしての一貫性を保った。</p>
+    </div>
+  </div>
+
+  <div class="links-row">
+    <a class="btn btn-secondary" href="../index.html">← 一覧に戻る</a>
+  </div>
+
+</div>
+<script src="works.js"></script>
+</body>
+</html>

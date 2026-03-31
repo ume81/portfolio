@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markdown Interactive Editor | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .feature-item { border-left-color: var(--accent4); }
+  .tech-tag.highlight { border-color: var(--accent4); color: var(--accent4); background: rgba(168,85,247,0.05); }
+  .notes-box { border-left-color: var(--accent4); }
+  .btn-primary { background: var(--accent4); border-color: var(--accent4); color: #fff; }
+  .btn-primary:hover { background: transparent; color: var(--accent4); }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+<div class="page-wrapper">
+
+  <nav class="nav">
+    <a class="back-link" href="../index.html">ポートフォリオに戻る</a>
+    <span class="nav-num">09 / 09</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-meta">
+      <span class="type-badge type-both">VSCode Extension</span>
+      <span class="hero-num">// 09</span>
+    </div>
+    <h1>Markdown<br>Interactive Editor</h1>
+    <p class="hero-desc">
+      マークダウンファイルをプレビュー状態のまま直接編集できるWYSIWYGエディター VSCode拡張機能。ソースを意識せず、見たまま書ける編集体験を提供する。
+    </p>
+  </div>
+
+  <div class="media-block">
+    <div class="media-label">demo / screenshot</div>
+    <div class="media-main">
+      <img src="../images/mdedit-main.jpg" alt="Markdown Interactive Editor メイン画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+    </div>
+    <div class="media-sub-grid">
+      <div class="media-sub">
+        <img src="../images/mdedit-checkbox.jpg" alt="チェックボックス・ラジオボタン" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/mdedit-mermaid.jpg" alt="Mermaid図レンダリング" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/mdedit-textmode.jpg" alt="テキストモード別タブ表示" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">overview</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-card-label">PROBLEM</div>
+        <div class="overview-card-value">VSCodeでマークダウンを書くには記法を意識しながら編集する必要があり、プレビューとエディタを行き来するのが手間</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">SOLUTION</div>
+        <div class="overview-card-value">プレビュー表示のまま直接編集できるWYSIWYGモードを実現。マークダウン記法を意識せず、見たままの状態で文書を編集できる</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">TARGET USER</div>
+        <div class="overview-card-value">VSCodeでドキュメント・README・メモを書くエンジニアや、マークダウン記法に不慣れなユーザー</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">PLATFORM</div>
+        <div class="overview-card-value">VSCode拡張機能（Windows / Mac / Linux 対応）。*.mdファイルのカスタムエディターとして動作</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">features</div>
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="feature-icon">✏️</div>
+        <div class="feature-content">
+          <div class="feature-title">WYSIWYGマークダウン編集</div>
+          <div class="feature-desc">プレビュー表示のまま直接テキストを編集できる。見出し・太字・リスト・コードブロックなどマークダウン記法をビジュアルで確認しながら書ける。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📊</div>
+        <div class="feature-content">
+          <div class="feature-title">Mermaid図のインラインレンダリング</div>
+          <div class="feature-desc">コードブロックにmermaidを指定するとflowchart・sequenceDiagram・erDiagramなどをWYSIWYG上でそのまま図として表示。設計ドキュメントやREADMEを記法を意識せず編集できる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">💻</div>
+        <div class="feature-content">
+          <div class="feature-title">コードブロック シンタックスハイライト</div>
+          <div class="feature-desc">コードブロックで言語を指定するとWYSIWYG上でもシンタックスハイライトが適用される。JavaScript・PHP・TypeScriptなど主要言語に対応。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🖼️</div>
+        <div class="feature-content">
+          <div class="feature-title">画像ドラッグ&ドロップ</div>
+          <div class="feature-desc">画像ファイルをエディタにドロップするだけで、指定ディレクトリへの保存とマークダウン記法の自動挿入を行う。保存先・サイズ上限・ファイル形式・重複処理を設定から制御できる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📄</div>
+        <div class="feature-content">
+          <div class="feature-title">テンプレート機能</div>
+          <div class="feature-desc">よく使うマークダウン構造をテンプレートとして登録・呼び出し。デフォルトテンプレートの復元にも対応。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">☑️</div>
+        <div class="feature-content">
+          <div class="feature-title">インタラクティブなチェックボックス・ラジオボタン</div>
+          <div class="feature-desc">チェックボックスはプレビュー上でそのままクリックして操作できる。さらにマークダウン標準では存在しないラジオボタン構文を独自サポートし、選択肢が一つに絞られる投票・確認用リストを作成可能。打ち合わせ用メモや議事録として活用しやすい。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔄</div>
+        <div class="feature-content">
+          <div class="feature-title">テキストモード（別タブ表示）</div>
+          <div class="feature-desc">ボタンワンクリックで同ファイルを通常のマークダウンテキストエディタとして別タブで開く。WYSIWYGで書いた内容をソースで確認・修正したいときに使う。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">tech stack</div>
+    <div class="tech-grid">
+      <span class="tech-tag highlight">TypeScript</span>
+      <span class="tech-tag highlight">VSCode Extension API（Custom Editor）</span>
+      <span class="tech-tag highlight">marked.js</span>
+      <span class="tech-tag highlight">mermaid.js</span>
+      <span class="tech-tag highlight">Prettier</span>
+      <span class="tech-tag">highlight.js</span>
+      <span class="tech-tag">esbuild</span>
+      <span class="tech-tag">ESLint</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">technical notes</div>
+    <div class="notes-box">
+      <p>VSCode Custom Editor APIを使い、*.mdファイルに対してWYSIWYGエディターをカスタムエディターとして登録。marked.jsでマークダウンをHTMLに変換し、contenteditable属性を使ってインライン編集を実現している。</p>
+      <p>編集内容の変更検知にはMutationObserverを使用。DOM変更をリアルタイムに検知し、マークダウン形式に変換してVSCodeのドキュメントに書き戻すことで、通常のテキストエディタと同じ保存フローを維持している。</p>
+      <p>画像のドラッグ&ドロップはWebView内のdropイベントで受け取り、拡張機能側にバイナリデータをメッセージパッシングで渡して保存。ファイル名重複時の処理（上書き・日付付加・確認）を設定から選択できる。</p>
+    </div>
+  </div>
+
+  <div class="links-row">
+    <a class="btn btn-secondary" href="../index.html">← 一覧に戻る</a>
+  </div>
+
+</div>
+<script src="works.js"></script>
+</body>
+</html>

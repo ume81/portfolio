@@ -128,6 +128,8 @@
   .badge.web { border-color: var(--accent); color: var(--accent); }
   .badge.android { border-color: var(--accent2); color: var(--accent2); }
   .badge.ai { border-color: var(--accent3); color: var(--accent3); }
+  .badge.vscode { border-color: var(--accent4); color: var(--accent4); }
+  .badge.win { border-color: #fbbf24; color: #fbbf24; }
 
   /* ── DIVIDER ── */
   .divider {
@@ -430,6 +432,8 @@
   .type-ai { background: rgba(10,10,10,0.75); border: 1px solid var(--accent3); color: var(--accent3); }
   .type-web { background: rgba(10,10,10,0.75); border: 1px solid var(--accent); color: var(--accent); }
   .type-app { background: rgba(10,10,10,0.75); border: 1px solid var(--accent2); color: var(--accent2); }
+  .type-both { background: rgba(10,10,10,0.75); border: 1px solid var(--accent4); color: var(--accent4); }
+  .type-win { background: rgba(10,10,10,0.75); border: 1px solid #fbbf24; color: #fbbf24; }
 
   .card-body {
     padding: 20px;
@@ -586,9 +590,11 @@
       <p class="tagline">Web / Android / AI Application Developer</p>
     </div>
     <div class="header-badges">
-      <span class="badge web">WEB APP</span>
-      <span class="badge android">ANDROID</span>
-      <span class="badge ai">AI INTEGRATION</span>
+      <span class="badge web">Web App</span>
+      <span class="badge android">Android</span>
+      <span class="badge ai">AI Integration</span>
+      <span class="badge vscode">VSCode Extension</span>
+      <span class="badge win">Windows App</span>
     </div>
   </header>
 
@@ -686,26 +692,26 @@
   <section class="works-section">
     <div class="works-header">
       <div class="section-label">works</div>
-      <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);">06 projects</span>
+      <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);">09 projects</span>
     </div>
 
     <div class="works-grid">
 
       <!-- 01 -->
-      <a class="card" href="works/instagram-line-bot.html">
-        <div class="card-thumb ai-line">
-          <img src="images/sns-line-flow.jpg" alt="インスタ自動投稿LINEBot スクリーンショット">
-          <span class="card-type-badge type-ai">AI + LINE</span>
+      <a class="card" href="works/codepal.html">
+        <div class="card-thumb web-gw">
+          <img src="images/codepal-main.jpg" alt="CodePal" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px 4px 0 0;">
+          <span class="card-type-badge type-both">VSCode Extension</span>
         </div>
         <div class="card-body">
           <span class="card-num">// 01</span>
-          <h2 class="card-title">インスタ自動投稿<br>LINE Bot</h2>
-          <p class="card-desc">LINEで画像と一言を送るだけでClaude APIがキャプションを生成しInstagramへ自動投稿。飲食店・美容院向けの多店舗対応AI投稿支援システム。</p>
+          <h2 class="card-title">CodePal</h2>
+          <p class="card-desc">Live2DキャラクターがVSCodeに常駐するAIコードレビューアシスタント。コミット時の自動レビュー・GitHub連携・タスク管理をエディタ内で完結。Gemini / Claude / OpenAI 対応。</p>
           <div class="card-tags">
-            <span class="tag">Claude API</span>
-            <span class="tag">LINE / Instagram API</span>
-            <span class="tag">Laravel 10.x</span>
-            <span class="tag">マルチ店舗</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Live2D / Pixi.js</span>
+            <span class="tag">マルチAI対応</span>
+            <span class="tag">GitHub API</span>
           </div>
         </div>
         <div class="card-footer">
@@ -714,35 +720,13 @@
       </a>
 
       <!-- 02 -->
-      <a class="card" href="works/kanji-checker.html">
-        <div class="card-thumb ai-kanji">
-          <img src="images/kanji-dashboard.png" alt="漢字ドリルAI採点アプリ スクリーンショット">
-          <span class="card-type-badge type-ai">AI + 画像認識</span>
-        </div>
-        <div class="card-body">
-          <span class="card-num">// 02</span>
-          <h2 class="card-title">漢字ドリル<br>AI採点アプリ</h2>
-          <p class="card-desc">子どもが書いた漢字をスマホで撮影するだけでClaude APIが自動採点。経験値・レベルアップ・ガチャでモチベーションを維持。</p>
-          <div class="card-tags">
-            <span class="tag">Claude API</span>
-            <span class="tag">Laravel / Inertia.js</span>
-            <span class="tag">ゲーミフィケーション</span>
-            <span class="tag">親子アカウント</span>
-          </div>
-        </div>
-        <div class="card-footer">
-          <span class="card-link">詳細を見る</span>
-        </div>
-      </a>
-
-      <!-- 03 -->
       <a class="card" href="works/overlay-ai-assistant.html">
         <div class="card-thumb ai-overlay">
           <img src="images/overlay-home.jpg" alt="オーバーレイAIアシスタント" style="width:100%;height:100%;object-fit:cover;object-position:center;border-radius:4px 4px 0 0;">
           <span class="card-type-badge type-ai">AI + Android</span>
         </div>
         <div class="card-body">
-          <span class="card-num">// 03</span>
+          <span class="card-num">// 02</span>
           <h2 class="card-title">オーバーレイ<br>AIアシスタント</h2>
           <p class="card-desc">Live2DキャラクターがAndroid上に常駐しClaude / Gemini APIで会話・タスク管理・アプリ起動を操作できるFlutterアプリ。オーバーレイはKotlinで完全独自実装。</p>
           <div class="card-tags">
@@ -757,14 +741,58 @@
         </div>
       </a>
 
+      <!-- 03 -->
+      <a class="card" href="works/instagram-line-bot.html">
+        <div class="card-thumb ai-line">
+          <img src="images/sns-line-flow.jpg" alt="インスタ自動投稿LINEBot スクリーンショット">
+          <span class="card-type-badge type-ai">AI + LINE</span>
+        </div>
+        <div class="card-body">
+          <span class="card-num">// 03</span>
+          <h2 class="card-title">インスタ自動投稿<br>LINE Bot</h2>
+          <p class="card-desc">LINEで画像と一言を送るだけでClaude APIがキャプションを生成しInstagramへ自動投稿。飲食店・美容院向けの多店舗対応AI投稿支援システム。</p>
+          <div class="card-tags">
+            <span class="tag">Claude API</span>
+            <span class="tag">LINE / Instagram API</span>
+            <span class="tag">Laravel 10.x</span>
+            <span class="tag">マルチ店舗</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-link">詳細を見る</span>
+        </div>
+      </a>
+
       <!-- 04 -->
-      <a class="card" href="works/groupware.html">
-        <div class="card-thumb web-gw">
-          <img src="images/groupware.png" alt="グループウェア スクリーンショット">
-          <span class="card-type-badge type-web">WEB APP</span>
+      <a class="card" href="works/kanji-checker.html">
+        <div class="card-thumb ai-kanji">
+          <img src="images/kanji-dashboard.png" alt="漢字ドリルAI採点アプリ スクリーンショット">
+          <span class="card-type-badge type-ai">AI + 画像認識</span>
         </div>
         <div class="card-body">
           <span class="card-num">// 04</span>
+          <h2 class="card-title">漢字ドリル<br>AI採点アプリ</h2>
+          <p class="card-desc">子どもが書いた漢字をスマホで撮影するだけでClaude APIが自動採点。経験値・レベルアップ・ガチャでモチベーションを維持。</p>
+          <div class="card-tags">
+            <span class="tag">Claude API</span>
+            <span class="tag">Laravel / Inertia.js</span>
+            <span class="tag">ゲーミフィケーション</span>
+            <span class="tag">親子アカウント</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-link">詳細を見る</span>
+        </div>
+      </a>
+
+      <!-- 05 -->
+      <a class="card" href="works/groupware.html">
+        <div class="card-thumb web-gw">
+          <img src="images/groupware.png" alt="グループウェア スクリーンショット">
+          <span class="card-type-badge type-web">Web App</span>
+        </div>
+        <div class="card-body">
+          <span class="card-num">// 05</span>
           <h2 class="card-title">グループウェア</h2>
           <p class="card-desc">勤怠管理・チャット・タスク管理を統合したWebアプリ。複数機能の設計・DB設計・認証まで一人で実装。</p>
           <div class="card-tags">
@@ -779,14 +807,14 @@
         </div>
       </a>
 
-      <!-- 05 -->
+      <!-- 06 -->
       <a class="card" href="works/inventory.html">
         <div class="card-thumb web-inv">
           <img src="images/inventory-main.png" alt="バーコード在庫管理 スクリーンショット">
-          <span class="card-type-badge type-web">WEB APP</span>
+          <span class="card-type-badge type-web">Web App</span>
         </div>
         <div class="card-body">
-          <span class="card-num">// 05</span>
+          <span class="card-num">// 06</span>
           <h2 class="card-title">バーコード<br>在庫管理アプリ</h2>
           <p class="card-desc">商品バーコードをスキャンするだけで在庫を管理。入出庫履歴・在庫アラートなど小売・飲食店向けの実用機能を搭載。</p>
           <div class="card-tags">
@@ -801,14 +829,14 @@
         </div>
       </a>
 
-      <!-- 06 -->
+      <!-- 07 -->
       <a class="card" href="works/garden-app.html">
         <div class="card-thumb app-garden">
           <img src="images/garden-timeline.jpg" alt="家庭菜園管理アプリ スクリーンショット">
           <span class="card-type-badge type-app">Android</span>
         </div>
         <div class="card-body">
-          <span class="card-num">// 06</span>
+          <span class="card-num">// 07</span>
           <h2 class="card-title">家庭菜園<br>管理アプリ</h2>
           <p class="card-desc">植えた日を入力するだけで栽培タイムラインが自動生成。天気APIと連動したリアルタイムアドバイスとプッシュ通知でやり忘れを防ぐAndroidアプリ。</p>
           <div class="card-tags">
@@ -816,6 +844,50 @@
             <span class="tag">Laravel 12</span>
             <span class="tag">天気API連動</span>
             <span class="tag">Push通知</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-link">詳細を見る</span>
+        </div>
+      </a>
+
+      <!-- 08 -->
+      <a class="card" href="works/desktopmascot.html">
+        <div class="card-thumb web-gw">
+          <img src="images/mascot-main.jpg" alt="デスクトップマスコット タスク管理" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px 4px 0 0;">
+          <span class="card-type-badge type-win">Windows App</span>
+        </div>
+        <div class="card-body">
+          <span class="card-num">// 08</span>
+          <h2 class="card-title">デスクトップマスコット<br>タスク管理</h2>
+          <p class="card-desc">デスクトップ常駐のマスコットキャラクターがAIで業務タスクを管理。メール本文からGeminiがタスクを自動生成、チャット感覚で追加できるElectronアプリ。</p>
+          <div class="card-tags">
+            <span class="tag">Electron</span>
+            <span class="tag">React / TypeScript</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">SQLite</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-link">詳細を見る</span>
+        </div>
+      </a>
+
+      <!-- 09 -->
+      <a class="card" href="works/mdedit.html" style="--card-num:'// 09'">
+        <div class="card-thumb web-gw">
+          <img src="images/mdedit-main.jpg" alt="Markdown Interactive Editor" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px 4px 0 0;">
+          <span class="card-type-badge type-both">VSCode Extension</span>
+        </div>
+        <div class="card-body">
+          <span class="card-num">// 09</span>
+          <h2 class="card-title">Markdown<br>Interactive Editor</h2>
+          <p class="card-desc">マークダウンをプレビュー状態のまま直接編集できるWYSIWYGエディター VSCode拡張。画像ドロップ保存・テンプレート機能対応。</p>
+          <div class="card-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">VSCode Custom Editor</span>
+            <span class="tag">marked.js</span>
+            <span class="tag">WYSIWYG</span>
           </div>
         </div>
         <div class="card-footer">

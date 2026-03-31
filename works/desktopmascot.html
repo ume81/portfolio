@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>デスクトップマスコット タスク管理 | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .feature-item { border-left-color: var(--accent2); }
+  .tech-tag.highlight { border-color: var(--accent2); color: var(--accent2); background: rgba(0,255,157,0.05); }
+  .notes-box { border-left-color: var(--accent2); }
+  .btn-primary { background: var(--accent2); border-color: var(--accent2); color: #000; }
+  .btn-primary:hover { background: transparent; color: var(--accent2); }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+<div class="page-wrapper">
+
+  <nav class="nav">
+    <a class="back-link" href="../index.html">ポートフォリオに戻る</a>
+    <span class="nav-num">08 / 09</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-meta">
+      <span class="type-badge type-win">Windows App</span>
+      <span class="hero-num">// 08</span>
+    </div>
+    <h1>デスクトップマスコット<br>タスク管理</h1>
+    <p class="hero-desc">
+      デスクトップに常駐するマスコットキャラクターがAIアシスタントとして業務タスクを管理するElectronアプリ。メール内容からのAIタスク自動生成・チャット形式でのタスク追加に対応。
+    </p>
+  </div>
+
+  <div class="media-block">
+    <div class="media-label">demo / screenshot</div>
+    <div class="media-main">
+      <img src="../images/mascot-main.jpg" alt="AIメールタスク抽出" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+    </div>
+    <div class="media-sub-grid">
+      <div class="media-sub">
+        <img src="../images/mascot-bubble.jpg" alt="キャラクター吹き出し通知" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/mascot-tasks.jpg" alt="タスク一覧" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+      <div class="media-sub">
+        <img src="../images/mascot-chat.jpg" alt="チャット画面" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">overview</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-card-label">PROBLEM</div>
+        <div class="overview-card-value">業務メールから手動でタスクを起こす作業が手間。タスク管理ツールを別途開くのが面倒で、タスクの記録漏れが起きやすい</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">SOLUTION</div>
+        <div class="overview-card-value">IMAPでメールを直接取得しAIがタスクを自動生成。デスクトップ常駐のキャラクターにチャット感覚でタスクを追加でき、Google認証によるマルチデバイス同期にも対応</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">TARGET USER</div>
+        <div class="overview-card-value">メールベースで業務が動くビジネスパーソン。複数PC間でタスクを共有したい人</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">PLATFORM</div>
+        <div class="overview-card-value">Windowsデスクトップアプリ（Electron）。ローカルはSQLite、クラウド同期はLaravel API + Google OAuth</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">features</div>
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="feature-icon">📧</div>
+        <div class="feature-content">
+          <div class="feature-title">IMAPメール取得 + AIタスク自動生成</div>
+          <div class="feature-desc">IMAPで受信メールを直接取得し、Gemini / OpenAI APIがタスクを自動抽出・登録。対応期限・優先度の提案まで行う。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">💬</div>
+        <div class="feature-content">
+          <div class="feature-title">チャット形式でタスク追加</div>
+          <div class="feature-desc">マスコットキャラクターとの会話形式でタスクを追加・確認・完了。自然な言葉でタスクを登録でき、フォーム入力より素早く操作できる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🖥️</div>
+        <div class="feature-content">
+          <div class="feature-title">デスクトップ常駐</div>
+          <div class="feature-desc">他のアプリを使用中でも常にデスクトップに表示。アプリを切り替えることなくタスクの確認・追加が可能。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔗</div>
+        <div class="feature-content">
+          <div class="feature-title">Google OAuth + マルチデバイス同期</div>
+          <div class="feature-desc">Googleアカウントでログインし、Laravel API経由でタスクをクラウド保存。複数PCからデータを共有できる。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔔</div>
+        <div class="feature-content">
+          <div class="feature-title">キャラクター吹き出し通知</div>
+          <div class="feature-desc">新着メール・今日のタスク一覧・期限30分前アラートなど、キャラクターとの会話形式で吹き出し通知が届く。作業中でも自然に情報を受け取れる。音声読み上げは追加予定。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">tech stack</div>
+    <div class="tech-grid">
+      <span class="tech-tag highlight">Electron</span>
+      <span class="tech-tag highlight">React / TypeScript</span>
+      <span class="tech-tag highlight">Vite</span>
+      <span class="tech-tag highlight">Gemini API</span>
+      <span class="tech-tag highlight">OpenAI API</span>
+      <span class="tech-tag highlight">SQLite（better-sqlite3）</span>
+      <span class="tech-tag highlight">Laravel Socialite（Google OAuth）</span>
+      <span class="tech-tag">Laravel 12 / PHP 8.2</span>
+      <span class="tech-tag">Laravel Sanctum</span>
+      <span class="tech-tag">imapflow / mailparser</span>
+      <span class="tech-tag">Tiptap</span>
+      <span class="tech-tag">dnd-kit</span>
+      <span class="tech-tag">recharts</span>
+      <span class="tech-tag">Tailwind CSS</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">technical notes</div>
+    <div class="notes-box">
+      <p>ElectronのMainプロセスとRendererプロセスをIPC通信で接続する構成。RendererからDB・OS APIに直接アクセスせず、必ずMainプロセス経由にすることでセキュリティと責務の分離を徹底している。</p>
+      <p>imapflow / mailparserでIMAPサーバーから受信メールを直接取得。メール本文をGemini / OpenAI APIに渡してタスクを自動抽出する。オフライン時はSQLiteでローカル管理し、オンライン時はLaravel API + Laravel Sanctum経由でクラウド同期する設計。</p>
+      <p>Google OAuth（Laravel Socialite）によるログインでマルチデバイス対応を実現。CodePal（VSCode拡張）・オーバーレイAIアシスタント（Android）と合わせ、開発・業務・日常の3シーンでAIタスク管理を実現するシリーズ作品。</p>
+    </div>
+  </div>
+
+  <div class="links-row">
+    <a class="btn btn-secondary" href="../index.html">← 一覧に戻る</a>
+  </div>
+
+</div>
+<script src="works.js"></script>
+</body>
+</html>
